@@ -15,13 +15,13 @@ app.get('/mostpopular', (req, res) => {
 })
 
 app.get('/jordan', (req, res) => {
-    sneaks.getProducts("Jordan", 7, function(err, products){
+    sneaks.getProducts("Jordan", 6, function(err, products){
         res.json(products);
     })
 })
 
 app.get('/nike', (req, res) => {
-    sneaks.getProducts("Nike", 7, function(err, products){
+    sneaks.getProducts("Nike", 6, function(err, products){
         res.json(products);
     })
 })
