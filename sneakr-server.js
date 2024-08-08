@@ -38,7 +38,24 @@ app.get('/adidas', (req, res) => {
     })
 })
 
+app.get('/puma', (req, res) => {
+    sneaks.getProducts("Puma", 6, function(err, products){
+        res.json(products);
+    })
+})
+
+app.get('/converse', (req, res) => {
+    sneaks.getProducts("Converse", 6, function(err, products){
+        res.json(products);
+    })
+})
+
+app.get('/crocs', (req, res) => {
+    sneaks.getProducts("Crocs", 6, function(err, products){
+        res.json(products);
+    })
+})
+
 app.listen(8000, () => {
     console.log(`Server is running on port 8000.`)
 })
-
