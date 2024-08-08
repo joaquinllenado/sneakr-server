@@ -9,52 +9,54 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/mostpopular', (req, res) => {
-    sneaks.getMostPopular(6, function(err, products){
+    sneaks.getMostPopular(10, function(err, products){
         res.json(products);
     })
 })
 
 app.get('/jordan', (req, res) => {
-    sneaks.getProducts("Jordan", 6, function(err, products){
+    sneaks.getProducts("Jordan", 20, function(err, products){
         res.json(products);
     })
 })
 
 app.get('/nike', (req, res) => {
-    sneaks.getProducts("Nike", 6, function(err, products){
+    sneaks.getProducts("Nike", 20, function(err, products){
         res.json(products);
     })
 })
 
 app.get('/newbalance', (req, res) => {
-    sneaks.getProducts("New Balance", 6, function(err, products){
+    sneaks.getProducts("New Balance", 20, function(err, products){
         res.json(products);
     })
 })
 
 app.get('/adidas', (req, res) => {
-    sneaks.getProducts("Adidas", 6, function(err, products){
+    sneaks.getProducts("Adidas", 20, function(err, products){
         res.json(products);
     })
 })
 
 app.get('/puma', (req, res) => {
-    sneaks.getProducts("Puma", 6, function(err, products){
-        res.json(products);
-    })
-})
-
-app.get('/converse', (req, res) => {
-    sneaks.getProducts("Converse", 6, function(err, products){
+    sneaks.getProducts("Puma", 20, function(err, products){
         res.json(products);
     })
 })
 
 app.get('/crocs', (req, res) => {
-    sneaks.getProducts("Crocs", 6, function(err, products){
+    sneaks.getProducts("Crocs", 20, function(err, products){
         res.json(products);
     })
 })
+
+app.get('/converse', (req, res) => {
+    sneaks.getProducts("Converse", 20, function(err, products){
+        res.json(products);
+    })
+})
+
+
 
 app.listen(8000, () => {
     console.log(`Server is running on port 8000.`)
