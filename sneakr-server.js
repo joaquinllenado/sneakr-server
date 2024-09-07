@@ -8,7 +8,7 @@ const sneaks = new SneaksAPI();
 app.use(cors());
 app.use(express.json());
 
-/* app.get('/search', (req, res) => {
+app.get('/search', (req, res) => {
     const query = req.query.q;
     sneaks.getProducts(query, 20, function(err, products) {
         if (err) {
@@ -16,7 +16,7 @@ app.use(express.json());
         }
         res.json(products);
     })
-}) */
+}) 
 
 app.get('/mostpopular', (req, res) => {
     sneaks.getMostPopular(10, function(err, products){
