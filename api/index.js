@@ -8,6 +8,8 @@ const sneaks = new SneaksAPI();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => res.status(200).json({ message: 'Hello World!' }))
+
 app.get('/search', (req, res) => {
     const query = req.query.q;
     sneaks.getProducts(query, 20, function(err, products) {
